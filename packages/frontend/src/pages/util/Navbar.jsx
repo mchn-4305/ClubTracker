@@ -1,6 +1,7 @@
 // src/pages/util/Navbar.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import styles from './Navbar.module.css';
 
 const Navbar = () => {
     // remove jwt on logout
@@ -10,13 +11,16 @@ const Navbar = () => {
 
     return (
         <nav >
-            <h1><Link to="/home">Club<span>Tracker</span></Link></h1>
+            <h1><Link to="/">Club<span>Tracker</span></Link></h1>
             <div >
-                <Link to="/calendar">Calendar</Link>
-                <Link to="/calendar">Members</Link>
-                <Link to="/calendar">Employees</Link>
-                <Link onClick={handleLogout} to="/login">Log Out</Link>
+                <Link to="/">Home</Link>
+                {/* <Link to="/calendar">Calendar</Link> */}
+                {/* <Link to="/members">Members</Link> */}
+                {/* <Link to="/pos">P.O.S</Link> */}
             </div>
+            {/* drop down button for profile settings */}
+            {/* options: settings, log out, clock in (overlay: requires password) */}
+            <button><img src="" alt="My Profile" /></button>
         </nav>
     );
 };
